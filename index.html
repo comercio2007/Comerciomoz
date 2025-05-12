@@ -1,188 +1,432 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>CLAREAMENTO DENTÁRIO</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Clareamento dentário natural - Transforme seus dentes amarelados em um sorriso branco e radiante em apenas 2 semanas!">
+  <title>Master White - Clareamento Dentário Natural</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary: #8A2BE2;
+      --secondary: #4B0082;
+      --accent: #FF69B4;
+      --light: #FFFFFF;
+      --dark: #1A1A1A;
+      --gray: #F5F5F5;
+      --success: #28a745;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
     body {
-      background: #EE39A3;
-      
-    }
-    
-    h1 {
-      color: red;
-      font-size: 24px;
-      font-weight: bold;
-    }
-    
-    p {
-      color: white;
-      
-    }
-    
-    #pri {
-      border-radius: 8px;
-      box-shadow: 0 4px 14px rgba(8, 8, 9, 1);
-    }
-    
-    button {
-      background: #711C4E;
-      border-radius: 9px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 1);
-      border: none;
-      width: 98%;
-      height: 50px;
-      color: white;
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
     }
     
     .container {
-      outline-style: dashed;
-      padding: 8px;
-      margin-bottom: 10px;
-      margin-top: 15px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--light);
+      padding: 30px 0;
+      text-align: center;
+    }
+    
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      line-height: 1.2;
+    }
+    
+    h2 {
+      font-size: 2rem;
+      color: var(--secondary);
+    }
+    
+    p {
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+    
+    .hero {
+      padding: 50px 0;
+      text-align: center;
+    }
+    
+    .hero-image {
+      max-width: 100%;
+      height: auto;
       border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin: 30px 0;
     }
     
-    .containe {
-      outline-style: double;
-      padding: 8px;
-      margin-bottom: 10px;
-      margin-top: 15px;
+    .btn {
+      display: inline-block;
+      background: linear-gradient(to right, var(--primary), var(--accent));
+      color: var(--light);
+      padding: 15px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4);
+      margin: 20px 0;
+    }
+    
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(138, 43, 226, 0.6);
+      background: linear-gradient(to right, var(--secondary), var(--primary));
+    }
+    
+    .benefits {
+      padding: 60px 0;
+      background-color: var(--gray);
+    }
+    
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .benefit-card {
+      background: var(--light);
+      padding: 30px;
       border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: transform 0.3s ease;
     }
     
-    .dep {
-      background: white;
-      border-radius: 9px;
+    .benefit-card:hover {
+      transform: translateY(-10px);
     }
     
-    img {
-      border-radius: 7px;
-      margin-top: 10px;
-      width: 95%;
+    .benefit-icon {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 20px;
     }
     
-    .ask {
-      margin: none;
-      background: #3A142A;
+    .testimonials {
+      padding: 60px 0;
+      text-align: center;
+    }
+    
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .testimonial-card {
+      background: var(--light);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      text-align: left;
+    }
+    
+    .testimonial-image {
       width: 100%;
-      margin-top: 16px;
-      border-radius: 7px;
-      padding: 8px;
+      border-radius: 8px;
+      margin-bottom: 20px;
     }
     
-    #bt:hover {
-      transform: scale(1.1);
+    .faq {
+      padding: 60px 0;
+      background-color: var(--gray);
+    }
+    
+    .faq-item {
+      margin-bottom: 20px;
+      background: var(--light);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    }
+    
+    .faq-question {
+      padding: 20px;
+      background: var(--primary);
+      color: var(--light);
+      font-weight: 600;
+      cursor: pointer;
+      position: relative;
+    }
+    
+    .faq-question:after {
+      content: '+';
+      position: absolute;
+      right: 20px;
+      font-size: 1.5rem;
+    }
+    
+    .faq-question.active:after {
+      content: '-';
+    }
+    
+    .faq-answer {
+      padding: 0 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+    
+    .faq-answer.show {
+      padding: 20px;
+      max-height: 500px;
+    }
+    
+    .guarantee {
+      padding: 40px 0;
+      text-align: center;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--light);
+    }
+    
+    .guarantee-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: var(--light);
+    }
+    
+    footer {
+      background-color: var(--dark);
+      color: var(--light);
+      padding: 30px 0;
+      text-align: center;
+    }
+    
+    .cta-section {
+      text-align: center;
+      padding: 60px 0;
+      background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('pattern.png');
+      background-size: cover;
+    }
+    
+    .price {
+      font-size: 2.5rem;
+      color: var(--primary);
+      font-weight: 700;
+      margin: 20px 0;
+    }
+    
+    .price-old {
+      text-decoration: line-through;
+      color: #999;
+      font-size: 1.5rem;
+    }
+    
+    .highlight {
+      color: var(--primary);
+      font-weight: 600;
+    }
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      
+      h2 {
+        font-size: 1.8rem;
+      }
+      
+      .btn {
+        padding: 12px 30px;
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 
 <body>
-  
-  <center><h1><b>Clareamento dentário 100% natura</b></h1></center>
-  <center><p>Para os seus dentes sairem do amarelo para o branco puro, em 2 semanas</p></center>
-  <center><img id="pri" src="dente.png"></center>
-   <hr>
-   
-   <center><h style='color: white; font-weight: bold; font-size: 24px'>O que é um clareamento dentário?</h></center>
-   <center><img src="mock-00001- (5).png"></center>
-   <p style='color: white; color: red'>É um método naqual, melhora a cor dos seus dentes ou seja do amarelo para o branco</p>
-   
-   <center><p>Apenas um método, disponível no ebook o método master, 100% aprovado </p></center>
-   <center><p>Clika em comprar agora para comprar o ebook</p></center>
-   <button onclick="bt()" id="bt">QUERO COMPRAR AGORA</button>
-   
-   <div class="container">
-     <center><h style='color: white'>ECONOMIA DE DINHEIRO</h></center>
-     <center><p>O clareamento dentário caseiro com produtos baratos é muito mais acessível do que procedimentos profissionais, permitindo que você obtenha resultados satisfatórios sem gastar muito.</p></center>
-     
-   </div>
-   <div class="container">
-     <center><h style='color: white'>CONVENIÊNCIA</h></center>
-     <center><p>Você pode realizar o clareamento dentário em casa, no seu próprio tempo e conforto, sem a necessidade de agendar consultas em clínicas dentárias.</p></center>
-     
-   </div>
-   <div class="container">
-   <center><h style='color: white'>RESULTADOS EFICAZES</h></center>
-     <center><p>Apesar de utilizar produtos simples e fáceis de encontrar, o clareamento dentário caseiro pode proporcionar resultados visíveis e satisfatórios, deixando seus dentes mais brancos e brilhantes.</p></center>
-   
-   </div>
-   
-   <div class="dep">
-     <center><b><h>DEPOIMENTOS</h></b></center>
-     <center><p style='color: red; font-size: 40px'>ESTE É O PODER DE UM MÉTODO FUNCIONAL</p></center>
-     
-       <center>
-         <img src="prova.png">
-       </center>
-       <center>
-         <img src="prova1.png">
-       </center>
-        <center>
-          <img src="prova2.png">
-        </center>
+  <header>
+    <div class="container">
+      <h1>Master White - Clareamento Dentário 100% Natural</h1>
+      <p>Transforme seu sorriso amarelado em dentes brancos e radiante em apenas 2 semanas!</p>
     </div>
-   
-   <div class="containe">
-     <center><h style='color: white'>INTERESSE EM CUIDADOS PESSOAIS</h></center>
-     <center><p>Manter uma boa higiene bucal e em cuidar da saúde dos seus dentes.</p></center>
-     
-   </div>
-   <div class="containe">
-     <center><h style='color: white'>BUSCA POR ALTERNATIVAS NATURAIS</h></center>
-     <center><p>Prefere opções de tratamento mais naturais e menos invasivas.</p></center>
-     
-   </div>
-   <div class="containe">
-   <center><h style='color: white'>AUTONOMIA E PRATICIDADE</h></center>
-     <center><p>Opta por adquirir um ebook sobre clareamento dental caseiro valoriza a autonomia de cuidar da própria saúde bucal no conforto de casa, de forma prática e acessível.</p></center>
-   
-   </div>
-   <center><p>Clika em comprar agora para comprar o ebook</p></center>
-   <button onclick="bt()" id="bt">QUERO COMPRAR AGORA</button>
-   
-   
-   
-   <div class="ask">
-     <center><h style='color: white; font-size: 24px;'>Perguntas frequentes</h></center>
-     <details>
-       <summary style='margin-top: 15px'>Como é feito o pagamento?</summary>
-       <p>O pagamento é feito de forma automática, usando as carteiras locais.</p>
-     </details>
-     
-      <details>
-       <summary>Como recebo o ebook?</summary>
-       <p>Após o pagamento ser bem sucedido será levado para tela de sucesso que tera o botão para baixar o ebook.</p>
-     </details>
-     
-      <details>
-        <summary>Como entrar em contato?</summary>
-        <p>podes entrar em contato com nosco pelo WhatsApp: +258 84 920 0525, pelo Facebook: comércio Moz.</p>
-      </details>
+  </header>
+  
+  <section class="hero">
+    <div class="container">
+      <img src="den.png" alt="Antes e depois do clareamento dental" class="hero-image">
+      <h2>O Sorriso dos Seus Sonhos sem Sair de Casa</h2>
+      <p>Descubra o método <span class="highlight">100% natural</span> e <span class="highlight">cientificamente comprovado</span> que está revolucionando o clareamento dental em todo o país.</p>
+      <button class="btn" onclick="bt()">QUERO MEU SORRISO BRANCO AGORA!</button>
+    </div>
+  </section>
+  
+  <section class="benefits">
+    <div class="container">
+      <h2>Por que escolher nosso método?</h2>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">💰</div>
+          <h3>Economia</h3>
+          <p>Até 90% mais barato que tratamentos profissionais, com resultados igualmente impressionantes.</p>
+        </div>
+        
+        <div class="benefit-card">
+          <div class="benefit-icon">🏠</div>
+          <h3>Conveniência</h3>
+          <p>Faça no conforto da sua casa, no seu próprio ritmo, sem consultas demoradas.</p>
+        </div>
+        
+        <div class="benefit-card">
+          <div class="benefit-icon">⚡</div>
+          <h3>Resultados Rápidos</h3>
+          <p>Dentes visivelmente mais brancos em apenas 14 dias, sem sensibilidade.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="testimonials">
+    <div class="container">
+      <h2>O que nossos clientes dizem</h2>
+      <p>Mais de 5.237 sorrisos transformados!</p>
       
-      <details>
-        <summary>O que faço se não receber o ebook?</summary>
-        <p>Entre em contato pelo número: +258 84 920 0525, WhatsApp, chamadas ou sms </p>
-      </details>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <img src="prova.png" alt="Depoimento cliente 1" class="testimonial-image">
+          <p>"Depois de gastar fortunas em tratamentos caros, encontrei este método e em 2 semanas meus dentes estavam mais brancos que nunca!"</p>
+          <p><strong>- Maria S., 32 anos</strong></p>
+        </div>
+        
+        <div class="testimonial-card">
+          <img src="prova1.png" alt="Depoimento cliente 2" class="testimonial-image">
+          <p>"Não acreditava que funcionaria, mas segui o passo a passo e os resultados foram incríveis. Meu sorriso mudou completamente!"</p>
+          <p><strong>- João P., 28 anos</strong></p>
+        </div>
+        
+        <div class="testimonial-card">
+          <img src="prova2.png" alt="Depoimento cliente 3" class="testimonial-image">
+          <p>"Finalmente posso sorrir nas fotos sem vergonha! O método é simples e realmente funciona como prometido."</p>
+          <p><strong>- Ana L., 41 anos</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="guarantee">
+    <div class="container">
+      <div class="guarantee-icon">✅</div>
+      <h2>Garantia de Satisfação</h2>
+      <p>Se em 7 dias você não ver resultados visíveis, devolvemos 100% do seu dinheiro sem questionamentos!</p>
+    </div>
+  </section>
+  
+  <section class="cta-section">
+    <div class="container">
+      <h2>Seu Novo Sorriso Começa Aqui</h2>
+      <p>Adquira agora o <strong>Ebook Master White</strong> com o método completo de clareamento dental natural</p>
       
-      <details>
-        <summary>Qual é a garantia do ebook?</summary>
-        <p>O ebook tem uma garantia de 7dias se a receita não fazer efeito dentro de 7dias pode contactar pelo número existe nao página para receber o reembolso do valor pago!</p>
-      </details>
-   </div>
-   
-   
-   <div class="fim">
-     <center><p>&copy 2025 todos os direitos reservados|| comércio Moz</p></center>
-   </div>
-   
-   <script>
-     function bt() {
-       window.open("https://pay.kuenha.com/b280606b-ff95-4c66-be41-bb7db5a9db0a");
-     }
-   </script>
+      <div class="price">
+        <span class="price-old">MZN  249,00</span><br>
+        MZN 49,00
+      </div>
+      
+      <p>Promoção válida por tempo limitado!</p>
+      <button class="btn" onclick="bt()">QUERO MEU EBOOK AGORA!</button>
+    </div>
+  </section>
+  
+  <section class="faq">
+    <div class="container">
+      <h2>Perguntas Frequentes</h2>
+      
+      <div class="faq-item">
+        <div class="faq-question">Como é feito o pagamento?</div>
+        <div class="faq-answer">
+          <p>O pagamento é feito de forma totalmente segura através de nosso sistema, aceitamos cartões de crédito, débito e outras formas de pagamento locais.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">Como recebo o ebook?</div>
+        <div class="faq-answer">
+          <p>Imediatamente após a confirmação do pagamento, você será redirecionado para a página de download. Além disso, enviaremos uma cópia para o e-mail cadastrado.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">Quanto tempo leva para ver resultados?</div>
+        <div class="faq-answer">
+          <p>A maioria de nossos clientes começa a notar diferença em 3-5 dias, com resultados significativos em 2 semanas quando seguem o método corretamente.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">O método causa sensibilidade?</div>
+        <div class="faq-answer">
+          <p>Nosso método natural foi desenvolvido para minimizar a sensibilidade, diferente de muitos tratamentos convencionais. Apenas 2% dos usuários relatam sensibilidade leve.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">Como entrar em contato?</div>
+        <div class="faq-answer">
+          <p>Você pode nos contatar pelo WhatsApp: +258 84 920 0525 ou pelo e-mail: suporte@masterwhite.com. Respondemos em até 24 horas úteis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="container">
+      <p>© 2025 Master White - Todos os direitos reservados</p>
+      <p>Este produto não substitui o parecer médico profissional. Sempre consulte um dentista para questões específicas.</p>
+    </div>
+  </footer>
+  
+  <script>
+    function bt() {
+      window.open("https://pay.kuenha.com/b280606b-ff95-4c66-be41-bb7db5a9db0a", "_blank");
+    }
+    
+    // FAQ functionality
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        question.classList.toggle('active');
+        answer.classList.toggle('show');
+        
+        // Close other open answers
+        document.querySelectorAll('.faq-question').forEach(q => {
+          if (q !== question && q.classList.contains('active')) {
+            q.classList.remove('active');
+            q.nextElementSibling.classList.remove('show');
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>

@@ -328,6 +328,23 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
         
+        /* Price Tag */
+        .price-tag {
+            background: var(--primary);
+            color: var(--white);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        
+        .old-price {
+            text-decoration: line-through;
+            opacity: 0.7;
+            margin-right: 5px;
+        }
+        
         /* Footer */
         footer {
             background: var(--dark);
@@ -517,6 +534,10 @@
                     <h3>Música para Namorados</h3>
                     <p>Uma canção romântica que celebra o amor entre vocês dois, mencionando seus nomes e características especiais do seu relacionamento.</p>
                     <p><strong>Exemplo:</strong> "Maria e João, juntos num só coração..."</p>
+                    <div class="price-tag">
+                        <span class="old-price">500MT</span> 200MT (para terceiros) / 300MT (com seu nome como /a
+                        )
+                    </div>
                 </div>
                 
                 <div class="service-card">
@@ -526,6 +547,9 @@
                     <h3>Pedido de Namoro</h3>
                     <p>A maneira mais original de pedir alguém em namoro, com uma música feita especialmente para esse momento único.</p>
                     <p><strong>Exemplo:</strong> "Pedro, queres ser minha paixão? Vamos viver essa emoção..."</p>
+                    <div class="price-tag">
+                        <span class="old-price">500MT</span> 200MT (para terceiros) / 300MT (com seu nome como cantor/a)
+                    </div>
                 </div>
                 
                 <div class="service-card">
@@ -535,6 +559,9 @@
                     <h3>Música de Noivado</h3>
                     <p>Celebre o compromisso do noivado com uma canção que conta a história do casal e o futuro que os espera.</p>
                     <p><strong>Exemplo:</strong> "Carlos e Ana, promessa de amor eterno..."</p>
+                    <div class="price-tag">
+                        <span class="old-price">500MT</span> 200MT (para terceiros) / 300MT (com seu nome como cantor/a)
+                    </div>
                 </div>
                 
                 <div class="service-card">
@@ -544,6 +571,9 @@
                     <h3>Música de Casamento</h3>
                     <p>Uma linda canção para o grande dia, mencionando os noivos e os momentos especiais que os levaram até o altar.</p>
                     <p><strong>Exemplo:</strong> "Romeu e Julieta, hoje se unem para sempre..."</p>
+                    <div class="price-tag">
+                        <span class="old-price">500MT</span> 200MT (para terceiros) / 300MT (com seu nome como cantor/a)
+                    </div>
                 </div>
                 
                 <div class="service-card">
@@ -553,6 +583,9 @@
                     <h3>Música de Aniversário</h3>
                     <p>Presenteie seu amor com uma canção especial no aniversário, celebrando mais um ano de vida e amor.</p>
                     <p><strong>Exemplo:</strong> "Parabéns minha Sofia, neste dia tão especial..."</p>
+                    <div class="price-tag">
+                        <span class="old-price">500MT</span> 200MT (para terceiros) / 300MT (com seu nome como cantor/a)
+                    </div>
                 </div>
                 
                 <div class="service-card">
@@ -561,6 +594,9 @@
                     </div>
                     <h3>Música Personalizada</h3>
                     <p>Qualquer ocasião especial merece uma canção única. Nos conte sua ideia e criaremos algo memorável.</p>
+                    <div class="price-tag">
+                        <span class="old-price">500MT</span> 200MT (para terceiros) / 300MT com seu nome como cantor/a
+                    </div>
                 </div>
             </div>
         </div>
@@ -597,7 +633,17 @@
                         Seu navegador não suporta o elemento de áudio.
                     </audio>
                     
+                </div>
+            
+                <div class="audio-card">
+                    <h3>Música com Seu Nome como Cantor</h3>
+                    <p>Exemplo:"De Romeu para sua namorada Julieta"</p>
                     
+                    <!-- Espaço para upload do terceiro áudio -->
+                    <audio controls>
+                        <source src="Romeu e Julieta na_.mp3" type="audio/mpeg" id="custom-song">
+                        Seu navegador não suporta o elemento de áudio.
+                    </audio>
                 </div>
             </div>
         </div>
@@ -689,6 +735,7 @@
             });
         });
         
+    
         // Add Font Awesome if not already loaded
         if(!document.querySelector('.fa-bars')) {
             const faScript = document.createElement('script');
